@@ -167,7 +167,7 @@ jobs:
           sed -i "s|image: ${REGISTRY}/.*|image: ${NEW_IMAGE}|g" kubernetes/deployment.yaml
           
           # Verify the change
-          echo "Updated deployment to use image: ${NEW_IMAGE}"
+          echo "Updated deployment to use image: ${NEW_IMAGE}"  #image
           grep -A 1 "image:" kubernetes/deployment.yaml
 
       - name: Commit and push changes
